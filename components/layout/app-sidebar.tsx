@@ -44,23 +44,25 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import * as React from 'react';
 import { Icons } from '../icons';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 export const company = {
-  name: 'Acme Inc',
+  name: 'MaxItProg',
   logo: GalleryVerticalEnd,
-  plan: 'Enterprise'
+  plan: 'Admin Store'
 };
 
 export default function AppSidebar() {
   const { data: session } = useSession();
   const pathname = usePathname();
-
+  const t = useTranslations('SidebarComponent');
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>
         <div className="flex gap-2 py-2 text-sidebar-accent-foreground ">
           <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-            <company.logo className="size-4" />
+            <Image alt='Logo' src={'/logo.png'} width={48} height={48} className="rounded-full bg-transparent"/>
           </div>
           <div className="grid flex-1 text-left text-sm leading-tight">
             <span className="truncate font-semibold">{company.name}</span>
@@ -84,11 +86,11 @@ export default function AppSidebar() {
                   <SidebarMenuItem>
                     <CollapsibleTrigger asChild>
                       <SidebarMenuButton
-                        tooltip={item.title}
+                        tooltip={`${t(item.title)||item.title}`}
                         isActive={pathname === item.url}
                       >
                         {item.icon && <Icon />}
-                        <span>{item.title}</span>
+                        <span>{`${t(item.title)||item.title}`}</span>
                         <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                       </SidebarMenuButton>
                     </CollapsibleTrigger>
@@ -101,7 +103,7 @@ export default function AppSidebar() {
                               isActive={pathname === subItem.url}
                             >
                               <Link href={subItem.url}>
-                                <span>{subItem.title}</span>
+                                <span>{`${t(subItem.title)||subItem.title}`}</span>
                               </Link>
                             </SidebarMenuSubButton>
                           </SidebarMenuSubItem>

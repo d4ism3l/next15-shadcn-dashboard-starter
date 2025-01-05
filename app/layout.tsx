@@ -36,8 +36,7 @@ export default async function RootLayout({
       <body className={'overflow-hidden'}>
         <NextIntlClientProvider messages={messages}>
           <NextTopLoader showSpinner={false} />
-          <Providers session={session}>
-             
+          <Providers session={session}>             
             <Toaster />
             {children}
           </Providers>

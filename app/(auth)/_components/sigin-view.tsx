@@ -4,7 +4,7 @@ import UserAuthForm from './user-auth-form';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import {useTranslations} from 'next-intl';
-import LocaleSwitcher from '@/components/base/LocaleSwitcher';
+import LocaleSwitcher from '@/components/layout/LocaleSwitcher';
 import { description } from '../../dashboard/overview/_components/bar-graph';
 
 

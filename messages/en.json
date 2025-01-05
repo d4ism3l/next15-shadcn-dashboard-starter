@@ -34,5 +34,28 @@
         "Continue with Google": "Continue with Google",
         "Continue with GitHub": "Continue with GitHub",
         "signInSuccess": "Sign in successful!"
+    },
+    "OverViewPage": {
+        "title": "Overview",
+        "description": "Overview of system activity.",
+        "welcomeMsg": " Hi, Welcome back 👋",
+        "overview": "Overview",
+        "analytics": "Analytics",
+        "download": "Download"
+    },
+    "SidebarComponent": {
+        "Dashboard": "Dashboard",
+        "Overview": "Overview",
+        "Reports": "Reports",
+        "Profile": "Profile",
+        "Account": "Account",
+        "Product": "Product",
+        "Login": "Login",
+        "Employee": "Empleado",
+        "Messages": "Messages",
+        "Settings": "Settings",
+        "Logout": "Logout",
+        "Kanban": "Kanban"
+
     }
   }

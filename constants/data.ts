@@ -1,5 +1,6 @@
 import { NavItem } from '@/types';
 
+
 export type User = {
   id: number;
   name: string;

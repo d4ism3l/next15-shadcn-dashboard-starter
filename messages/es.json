@@ -34,5 +34,28 @@
         "Continue with Google": "Continuar con Google",
         "Continue with GitHub": "Continuar con GitHub",
         "signInSuccess": "¡Inicio de sesión exitoso!"
+    },
+    "OverViewPage": {
+        "title": "Resumen",
+        "description": "Resumen de la actividad del sistema.",
+        "welcomeMsg": "¡Hola, bienvenido de nuevo 👋!",
+        "overview": "Resumen",
+        "analytics": "Analítica",
+        "download": "Descargar"
+
+    },
+    "SidebarComponent": {
+        "Dashboard": "Tablero",
+        "Overview": "Resumen",
+        "Reports": "Reportes",
+        "Profile": "Perfil",
+        "Account": "Cuenta",
+        "Product": "Producto",
+        "Login": "Iniciar sesión",
+        "Messages": "Mensajes",
+        "Employee": "Empleado",
+        "Settings": "Configuraciones",
+        "Logout": "Cerrar sesión",
+        "Kanban": "Kanban"
     }
   }

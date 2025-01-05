@@ -13,25 +13,29 @@ import {
   CardTitle
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useTranslations } from 'next-intl';
 
 export default function OverViewPage() {
+  const t = useTranslations('OverViewPage');
   return (
     <PageContainer scrollable>
       <div className="space-y-2">
         <div className="flex items-center justify-between space-y-2">
           <h2 className="text-2xl font-bold tracking-tight">
-            Hi, Welcome back 👋
+            {t('welcomeMsg')}
           </h2>
           <div className="hidden items-center space-x-2 md:flex">
             <CalendarDateRangePicker />
-            <Button>Download</Button>
+            <Button>{t('download')}</Button>
           </div>
         </div>
         <Tabs defaultValue="overview" className="space-y-4">
           <TabsList>
-            <TabsTrigger value="overview">Overview</TabsTrigger>
+            <TabsTrigger value="overview">
+              {t('overview')}
+            </TabsTrigger>
             <TabsTrigger value="analytics" disabled>
-              Analytics
+              {t('analytics')}
             </TabsTrigger>
           </TabsList>
           <TabsContent value="overview" className="space-y-4">
