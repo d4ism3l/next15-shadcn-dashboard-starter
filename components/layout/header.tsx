@@ -5,6 +5,7 @@ import { Breadcrumbs } from '../breadcrumbs';
 import SearchInput from '../search-input';
 import { UserNav } from './user-nav';
 import ThemeToggle from './ThemeToggle/theme-toggle';
+import LocaleSwitcher from '../base/LocaleSwitcher';
 
 export default function Header() {
   return (
@@ -19,8 +20,9 @@ export default function Header() {
         <div className="hidden md:flex">
           <SearchInput />
         </div>
-        <UserNav />
         <ThemeToggle />
+        <LocaleSwitcher />
+        <UserNav />
       </div>
     </header>
   );
