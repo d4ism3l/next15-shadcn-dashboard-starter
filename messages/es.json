@@ -1,0 +1,38 @@
+{
+    "HomePage": {
+        "title": "Hello world!"
+    },
+    "LocaleSwitcher": {
+        "language": "Idioma",
+        "en": "Inglés",
+        "es": "Español"
+    },
+    "SignInViewPage": {
+        "Logo": "Logo", 
+        "title": "Autenticación",
+        "description": "Formularios de autenticación construidos utilizando los componentes.",
+        "email": "Correo electrónico",
+        "password": "Contraseña",
+        "signIn": "Iniciar sesión",
+        "Login": "Iniciar sesión",
+        "Register": "Registrarse",
+        "CreateAccount": "Crear una cuenta",
+        "Forgot your password?": "¿Olvidaste tu contraseña?",
+        "CreateAccountDescription": "Ingresa tu correo electrónico a continuación para crear tu cuenta",
+        "Continue with Google": "Continuar con Google",
+        "Continue with GitHub": "Continuar con GitHub"
+    },
+    "UserAuthForm": {
+        "Email": "Correo electrónico",
+        "Password": "Contraseña",
+        "SignIn": "Iniciar sesión",
+        "Login": "Iniciar sesión",
+        "Register": "Registrarse",
+        "CreateAccount": "Crear una cuenta",
+        "Forgot your password?": "¿Olvidaste tu contraseña?",
+        "CreateAccountDescription": "Ingresa tu correo electrónico a continuación para crear tu cuenta",
+        "Continue with Google": "Continuar con Google",
+        "Continue with GitHub": "Continuar con GitHub",
+        "signInSuccess": "¡Inicio de sesión exitoso!"
+    }
+  }

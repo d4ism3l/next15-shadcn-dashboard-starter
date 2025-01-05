@@ -18,6 +18,7 @@ import { toast } from 'sonner';
 import * as z from 'zod';
 import GithubSignInButton from './github-auth-button';
 import GoogleSignInButton from './google-auth-button';
+import { useTranslations } from 'next-intl';
 
 const formSchema = z.object({
   email: z.string().email({ message: 'Enter a valid email address' })
@@ -26,6 +27,7 @@ const formSchema = z.object({
 type UserFormValue = z.infer<typeof formSchema>;
 
 export default function UserAuthForm() {
+  const t = useTranslations('UserAuthForm');
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get('callbackUrl');
   const [loading, startTransition] = useTransition();
@@ -43,7 +45,7 @@ export default function UserAuthForm() {
         email: data.email,
         callbackUrl: callbackUrl ?? '/dashboard'
       });
-      toast.success('Signed In Successfully!');
+      toast.success(t('signInSuccess'));
     });
   };
 

@@ -4,6 +4,8 @@ import { Toaster } from '@/components/ui/sonner';
 import type { Metadata } from 'next';
 import { Lato } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -22,15 +24,22 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const locale = await getLocale();
   const session = await auth();
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages();
+
   return (
     <html lang="en" className={`${lato.className}`} suppressHydrationWarning>
       <body className={'overflow-hidden'}>
-        <NextTopLoader showSpinner={false} />
-        <Providers session={session}>
-          <Toaster />
-          {children}
-        </Providers>
+        <NextIntlClientProvider messages={messages}>
+          <NextTopLoader showSpinner={false} />
+          <Providers session={session}>
+            <Toaster />
+            {children}
+          </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
